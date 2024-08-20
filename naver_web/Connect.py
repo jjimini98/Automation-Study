@@ -9,8 +9,9 @@ options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 
 class Connect :
-    driver = webdriver.Chrome(options,service=Service(ChromeDriverManager().install()))
 
+    # driver = webdriver.Chrome(options,service=Service(ChromeDriverManager().install()))
+    driver = webdriver.Chrome(options = options , service=Service())
     URL = "https://www.naver.com"
     driver.get(url=URL)
     time.sleep(5)
